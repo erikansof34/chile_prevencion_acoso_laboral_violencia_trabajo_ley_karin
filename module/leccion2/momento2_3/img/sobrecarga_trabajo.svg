@@ -1,0 +1,51 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="alert3" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#c01a5e;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#d946a0;stop-opacity:0.3" />
+    </radialGradient>
+    <filter id="glow3">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <circle cx="40" cy="40" r="35" fill="url(#alert3)" opacity="0.4">
+    <animate attributeName="opacity" values="0.2;0.8;0.2" dur="1.8s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="40" cy="25" r="8" fill="#c01a5e" filter="url(#glow3)">
+    <animate attributeName="fill" values="#c01a5e;#d946a0;#c01a5e" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <rect x="35" y="33" width="10" height="12" fill="#c01a5e" rx="2">
+    <animateTransform attributeName="transform" type="scale" values="1;1.05;1" dur="1.5s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="25" y="48" width="12" height="6" fill="#d946a0" rx="2">
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="1s" repeatCount="indefinite" begin="0s"/>
+  </rect>
+  <rect x="43" y="48" width="12" height="6" fill="#d946a0" rx="2">
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="1s" repeatCount="indefinite" begin="0.2s"/>
+  </rect>
+  <rect x="30" y="56" width="10" height="5" fill="#d946a0" rx="1">
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="1s" repeatCount="indefinite" begin="0.4s"/>
+  </rect>
+  <rect x="45" y="56" width="10" height="5" fill="#d946a0" rx="1">
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="1s" repeatCount="indefinite" begin="0.6s"/>
+  </rect>
+  <rect x="35" y="63" width="8" height="4" fill="#d946a0" rx="1">
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="1s" repeatCount="indefinite" begin="0.8s"/>
+  </rect>
+  <circle cx="15" cy="20" r="1" fill="#FFD700">
+    <animate attributeName="opacity" values="0;1;0" dur="0.6s" repeatCount="indefinite" begin="0s"/>
+  </circle>
+  <circle cx="65" cy="20" r="1" fill="#FFD700">
+    <animate attributeName="opacity" values="0;1;0" dur="0.6s" repeatCount="indefinite" begin="0.3s"/>
+  </circle>
+  <circle cx="15" cy="60" r="1" fill="#FFD700">
+    <animate attributeName="opacity" values="0;1;0" dur="0.6s" repeatCount="indefinite" begin="0.1s"/>
+  </circle>
+  <circle cx="65" cy="60" r="1" fill="#FFD700">
+    <animate attributeName="opacity" values="0;1;0" dur="0.6s" repeatCount="indefinite" begin="0.4s"/>
+  </circle>
+</svg>

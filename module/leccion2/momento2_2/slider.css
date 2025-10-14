@@ -1,0 +1,251 @@
+.infografia-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 15px;
+}
+
+.nivel-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 5px;
+}
+
+.icono-externo {
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.nivel-wrapper:hover .icono-externo {
+  transform: scale(1.1);
+}
+
+.nivel-card {
+  background: white;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  flex: 1;
+}
+
+.nivel-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  transition: all 0.3s ease;
+}
+
+.conflicto {
+  border-left: 5px solid #8B5CF6;
+}
+
+.conflicto::before {
+  background: linear-gradient(90deg, #8B5CF6, #A78BFA);
+}
+
+.acoso {
+  border-left: 5px solid #EC4899;
+}
+
+.acoso::before {
+  background: linear-gradient(90deg, #EC4899, #F472B6);
+}
+
+.nivel-wrapper.derecha .acoso {
+  border-left: none;
+  border-right: 5px solid #EC4899;
+}
+
+.violencia {
+  border-left: 5px solid #1E293B;
+}
+
+.violencia::before {
+  background: linear-gradient(90deg, #1E293B, #475569);
+}
+
+.nivel-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 20px -5px rgba(0, 0, 0, 0.15);
+}
+
+.nivel-card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  color: #1f2937;
+}
+
+.icono-animado {
+  transition: all 0.3s ease;
+}
+
+.nivel-card:hover .icono-animado {
+  animation: bounce 0.6s ease-in-out;
+}
+
+.conflicto:hover .dialogo-icon {
+  animation: pulse 1s ease-in-out infinite;
+}
+
+.acoso:hover .warning-icon {
+  animation: shake 0.5s ease-in-out;
+}
+
+.violencia:hover .lightning-icon {
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+.nivel-content {
+  line-height: 1.6;
+}
+
+.descripcion {
+  font-size: 0.95rem;
+  color: #374151;
+  margin-bottom: 8px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.ejemplo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f8fafc;
+  padding: 8px 10px;
+  border-radius: 6px;
+  margin: 8px 0;
+  border-left: 3px solid #6366f1;
+}
+
+.ejemplo-icon {
+  color: #6366f1;
+  font-size: 0.9rem;
+}
+
+.advertencia {
+  color: #dc2626;
+  font-weight: 600;
+  font-style: italic;
+  margin-top: 8px;
+  font-size: 0.85rem;
+}
+
+.mensaje-final {
+  color: #059669;
+  font-weight: 600;
+  font-style: italic;
+  margin-top: 8px;
+  text-align: center;
+  padding: 10px;
+  background: #ecfdf5;
+  border-radius: 6px;
+  border: 1px solid #10b981;
+  font-size: 0.85rem;
+}
+
+@keyframes bounce {
+
+  0%,
+  20%,
+  53%,
+  80%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  40%,
+  43% {
+    transform: translate3d(0, -8px, 0);
+  }
+
+  70% {
+    transform: translate3d(0, -4px, 0);
+  }
+
+  90% {
+    transform: translate3d(0, -2px, 0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes shake {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-2px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(2px);
+  }
+}
+
+@keyframes glow {
+  from {
+    filter: drop-shadow(0 0 5px #fbbf24);
+  }
+
+  to {
+    filter: drop-shadow(0 0 15px #f59e0b);
+  }
+}
+
+@media (max-width: 768px) {
+  .infografia-container {
+    padding: 15px;
+    gap: 8px;
+  }
+
+  .nivel-wrapper {
+    flex-direction: column !important;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .nivel-card {
+    padding: 12px;
+  }
+
+  .nivel-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .icono-externo {
+    width: 50px !important;
+    height: 50px !important;
+  }
+}
