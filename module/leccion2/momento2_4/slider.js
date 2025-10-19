@@ -1,4 +1,18 @@
 export function init() {
+  // Configurar actividad Lumi
+  const activity = {
+    title: 'Implicancias claves para la empresa y trabajadores',
+    src: 'https://app.lumi.education/api/v1/run/ZwmrvS/embed',
+    mobileHeight: '75vh',
+    desktopHeight: '70vh'
+  };
+
+  // Inicializar actividad cuando se abra el modal
+  document.getElementById('modalquiz2_4')?.addEventListener('shown.bs.modal', function () {
+    LumiActivities.init('modalquiz2_4', activity);
+  });
+
+  // cards educativas
   let cardActual = 0;
   const totalCards = 3;
 

@@ -18,12 +18,27 @@
   flex: 1;
 }
 
+.izquierda {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
 .imagen-circular {
   width: 60px;
   height: 60px;
   border-radius: 50%;
   overflow: hidden;
   margin-right: 1rem;
+  border: 3px solid white;
+  flex-shrink: 0;
+}
+
+.imagen-circular-izquierda {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-left: 1rem;
   border: 3px solid white;
   flex-shrink: 0;
 }

@@ -3,13 +3,13 @@
     align-items: flex-start;
 }
 
-.step-buttons {
+.step-buttons1_5 {
     gap: 15px;
     align-items: center;
     flex-shrink: 0;
 }
 
-.step-circle {
+.step-circle1_5 {
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -22,43 +22,43 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.step-circle[data-target="1"] {
+.step-circle1_5[data-target="1"] {
     background: linear-gradient(135deg, #6a1b9a, #8e44ad);
 }
 
-.step-circle[data-target="2"] {
+.step-circle1_5[data-target="2"] {
     background: linear-gradient(135deg, #c2185b, #e91e63);
 }
 
-.step-circle[data-target="3"] {
+.step-circle1_5[data-target="3"] {
     background: linear-gradient(135deg, #d32f2f, #e74c3c);
 }
 
-.step-circle[data-target="4"] {
+.step-circle1_5[data-target="4"] {
     background: linear-gradient(135deg, #7b1fa2, #9c27b0);
 }
 
-.step-circle span {
+.step-circle1_5 span {
     color: white;
     font-weight: bold;
     font-size: 1.1rem;
 }
 
-.step-circle:hover {
+.step-circle1_5:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     transform: scale(1.05);
 }
 
-.step-circle.active {
+.step-circle1_5.active {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     transform: scale(1.1);
 }
 
-.step-content-area {
+.step-content-area1_5 {
     width: 88%;
 }
 
-.step-content {
+.step-content1_5 {
     background: white;
     border-radius: 12px;
     padding: 15px;
@@ -67,83 +67,83 @@
     cursor: pointer;
 }
 
-.step-content.collapsed .step-details {
+.step-content1_5.collapsed .step-details1_5 {
     max-height: 0;
     overflow: hidden;
     opacity: 0;
     transition: all 0.4s ease;
 }
 
-.step-content.active .step-details {
+.step-content1_5.active .step-details1_5 {
     max-height: 500px;
     opacity: 1;
 }
 
-.step-content.active#content-1 {
+.step-content1_5.active#content-1 {
     border-left: 4px solid #8e44ad;
     background: linear-gradient(135deg, #6a1b9a, #8e44ad);
     color: white;
 }
 
-.step-content.active#content-2 {
+.step-content1_5.active#content-2 {
     border-left: 4px solid #e91e63;
     background: linear-gradient(135deg, #c2185b, #e91e63);
     color: white;
 }
 
-.step-content.active#content-3 {
+.step-content1_5.active#content-3 {
     border-left: 4px solid #e74c3c;
     background: linear-gradient(135deg, #d32f2f, #e74c3c);
     color: white;
 }
 
-.step-content.active#content-4 {
+.step-content1_5.active#content-4 {
     border-left: 4px solid #9c27b0;
     background: linear-gradient(135deg, #7b1fa2, #9c27b0);
     color: white;
 }
 
-.step-content.collapsed#content-1 {
+.step-content1_5.collapsed#content-1 {
     border-left: 4px solid #8e44ad;
     background: linear-gradient(135deg, #e1bee7, #ce93d8);
     color: #4a148c;
 }
 
-.step-content.collapsed#content-2 {
+.step-content1_5.collapsed#content-2 {
     border-left: 4px solid #e91e63;
     background: linear-gradient(135deg, #f8bbd9, #f48fb1);
     color: #880e4f;
 }
 
-.step-content.collapsed#content-3 {
+.step-content1_5.collapsed#content-3 {
     border-left: 4px solid #e74c3c;
     background: linear-gradient(135deg, #ffcdd2, #ef9a9a);
     color: #b71c1c;
 }
 
-.step-content.collapsed#content-4 {
+.step-content1_5.collapsed#content-4 {
     border-left: 4px solid #9c27b0;
     background: linear-gradient(135deg, #e1bee7, #ba68c8);
     color: #4a148c;
 }
 
-.step-content.active .step-title {
+.step-content1_5.active .step-title1_5 {
     color: white;
 }
 
-.step-content.active .step-description {
+.step-content1_5.active .step-description1_5 {
     color: rgba(255, 255, 255, 0.9);
 }
 
-.step-content.active .transcription-toggle {
+.step-content1_5.active .transcription-toggle1_5 {
     color: rgba(255, 255, 255, 0.8);
 }
 
-.step-content.active .transcription-toggle:hover {
+.step-content1_5.active .transcription-toggle1_5:hover {
     color: white;
 }
 
-.step-title {
+.step-title1_5 {
     margin-bottom: 10px;
     cursor: pointer;
     color: #2c3e50;
@@ -151,29 +151,29 @@
     font-size: 1rem;
 }
 
-.step-description {
+.step-description1_5 {
     color: #5a6c7d;
     line-height: 1.5;
     margin-bottom: 10px;
     font-size: 0.9rem;
 }
 
-.audio-center {
+.audio-center1_5 {
     text-align: center;
 }
 
-.audio-con-transcripcion {
+.audio-con-transcripcion1_5 {
     width: 100%;
     max-width: 250px;
 }
 
-.transcription-toggle {
+.transcription-toggle1_5 {
     margin-left: 8px;
     cursor: pointer;
     color: #6c757d;
     transition: color 0.3s ease;
 }
 
-.transcription-toggle:hover {
+.transcription-toggle1_5:hover {
     color: #495057;
 }
