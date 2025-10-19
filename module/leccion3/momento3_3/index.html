@@ -1,155 +1,204 @@
 <section class="row h-100">
-    <div class="animate__animated animate__fadeInLeftBig col-lg-5 col-md-12 sf-bg-dark sf-cl-row h-100">
-        <h1 class="sf-text-purple text-center"><span class="sf-text-white">Recordemos…<br></span> Equipos de protección
-            personal (EPP)</h1>
-        <p class="sf-text-white text-justify">
-            Tatiana te invita a conocer los EPP más comunes en el trabajo en Alturas:
-        </p>
-        <img src="../../assets/img/avatars/avatar_mujer_mirando_de frente_con_cuaderno_fondo_azul.webp" alt="avatar"
-            class="sf-img-40 mx-auto" />
-        <button class="sf-btn sf-btn-purple" data-bs-toggle="modal" data-bs-target="#sld3_3_sabiasque"><i
-                class="fa fa-question-circle"></i> ¿Sabías qué?</button>
+    <div class="animate__animated animate__fadeInLeftBig col-12 sf-bg-dark sf-ct-col">
+        <img src="../../assets/img/avatars/avatar_equipares7.webp" alt="avatar"
+            class="sf-img-xl-10 mx-auto d-none d-xl-block">
+        <div class="ms-xl-4 mx-xl-0">
+            <h1 class="sf-text-white text-center">Expediente digital <span class="sf-text-purple">°0051</span>
+            </h1>
+            <img src="../../assets/img/avatars/avatar_equipares7.webp" alt="avatar"
+                class="sf-img-80 sf-img-sm-60 sf-img-md-40 sf-img-lg-30 mx-auto d-xl-none mb-2">
+            <p class="sf-text-white text-justify">
+                Desde el momento en que se recibe una denuncia, se activa un proceso que busca proteger, investigar y
+                resolver con
+                justicia y enfoque de género.
+            </p>
+        </div>
     </div>
-    <div class="animate__animated animate__fadeInRightBig col-lg-7 col-md-12 sf-cr-row mb-5 h-100">
+    <div class="animate__animated animate__fadeInLeftBig col-12 sf-ct-col">
         <i class="hipt hipt-light my-2">
-            Presiona cada boton para descubrir su contenido
+            Antes de realizar la actividad, revisa el siguiente contenido haciendo clic en cada botón para leer más
+            información
             <i class="icon-inline icon-inline--start fa-solid fa-arrow-turn-down"></i>
         </i>
-        <div class="equipos-epp">
-            <div class="buttons_equipos_epp">
-                <button id="boton1_equipos_epp" onclick="showContentEquiposEpp(1)" class="active_equipos_epp">
-                    Arnés
-                </button>
-                <button id="boton2_equipos_epp" onclick="showContentEquiposEpp(2)">
-                    Línea de vida
-                </button>
-                <button id="boton3_equipos_epp" onclick="showContentEquiposEpp(3)">
-                    Casco
-                </button>
-                <button id="boton4_equipos_epp" onclick="showContentEquiposEpp(4)">
-                    Bandola<br>(mosquetón)
-                </button>
-                <button id="boton5_equipos_epp" onclick="showContentEquiposEpp(5)">
-                    Barbuquejo
-                </button>
-            </div>
-
-            <!-- Contenido para el arnés -->
-            <div id="contenido1_equipos_epp" class="content_equipos_epp active_equipos_epp">
-                <div class="buttons-switch">
-                    <button onclick="changeContent(1, 'correcto')" class="active-switch">Uso
-                        Correcto</button>
-                    <button onclick="changeContent(1, 'contraindicaciones')">Contraindicaciones</button>
-                </div>
-                <div class="preview-container-equipos_epp">
-                    <img id="img1" src="./momento3_3/img/arnes_correcto.webp" alt="Uso Correcto">
-                    <p id="texto1">
-                        El arnés de cuerpo completo debe ajustarse correctamente a la complexión
-                        del trabajador, asegurando que las correas de hombros, piernas y cintura
-                        estén ceñidas, pero no al punto de incomodar. La anilla dorsal, donde se
-                        conecta la línea de vida, debe estar ubicada entre los omóplatos para
-                        distribuir la fuerza en caso de una caída. Antes de cada uso, se debe
-                        inspeccionar el arnés para identificar posibles desgastes o daños.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Contenido para la línea de vida -->
-            <div id="contenido2_equipos_epp" class="content_equipos_epp">
-                <div class="buttons-switch">
-                    <button onclick="changeContent(2, 'correcto')" class="active-switch">Uso
-                        Correcto</button>
-                    <button onclick="changeContent(2, 'contraindicaciones')">Contraindicaciones</button>
-                </div>
-                <div class="preview-container-equipos_epp">
-                    <img id="img2" src="./momento3_3/img/linea_vida_correcto.webp" alt="Uso Correcto">
-                    <p id="texto2">
-                        La línea de vida debe estar bien asegurada a un anclaje certificado que
-                        soporte el peso y la fuerza de una caída. Debe tener la longitud
-                        adecuada para permitir movimiento, sin interferir con el trabajo, y
-                        estar conectada al anillo dorsal del arnés. La línea de vida puede ser
-                        fija o retráctil, según la tarea y el entorno.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Contenido para el casco -->
-            <div id="contenido3_equipos_epp" class="content_equipos_epp">
-                <div class="buttons-switch">
-                    <button onclick="changeContent(3, 'correcto')" class="active-switch">Uso
-                        Correcto</button>
-                    <button onclick="changeContent(3, 'contraindicaciones')">Contraindicaciones</button>
-                </div>
-                <div class="preview-container-equipos_epp">
-                    <img id="img3" src="./momento3_3/img/casco_correcto.webp" alt="Uso Correcto">
-                    <p id="texto3">El casco debe ajustarse correctamente a la cabeza y debe
-                        incluir una suspensión interna que absorba impactos. Se debe usar
-                        siempre con barbuquejo para evitar que se caiga mientras se trabaja en
-                        altura. Además, el casco debe revisarse antes de cada uso para
-                        asegurarse de que no tenga fisuras o daños.</p>
-                </div>
-            </div>
-
-            <!-- Contenido para la bandola -->
-            <div id="contenido4_equipos_epp" class="content_equipos_epp">
-                <div class="buttons-switch">
-                    <button onclick="changeContent(4, 'correcto')" class="active-switch">Uso
-                        Correcto</button>
-                    <button onclick="changeContent(4, 'contraindicaciones')">Contraindicaciones</button>
-                </div>
-                <div class="preview-container-equipos_epp">
-                    <img id="img4" src="./momento3_3/img/bandola_correcto.webp" alt="Uso Correcto">
-                    <p id="texto4">La bandola o mosquetón debe estar correctamente conectada
-                        tanto al arnés como a la línea de vida o anclaje. Se debe cerrar
-                        completamente y verificar que el cierre esté funcionando antes de
-                        usarla. Idealmente, los mosquetones deben ser de bloqueo automático para
-                        mayor seguridad.</p>
-                </div>
-            </div>
-
-            <!-- Contenido para el barbuquejo -->
-            <div id="contenido5_equipos_epp" class="content_equipos_epp">
-                <div class="buttons-switch">
-                    <button onclick="changeContent(5, 'correcto')" class="active-switch">Uso
-                        Correcto</button>
-                    <button onclick="changeContent(5, 'contraindicaciones')">Contraindicaciones</button>
-                </div>
-                <div class="preview-container-equipos_epp">
-                    <img id="img5" src="./momento3_3/img/barbuquejo_correcto.webp" alt="Uso Correcto">
-                    <p id="texto5">El barbuquejo, una correa que se ajusta alrededor del mentón,
-                        debe mantenerse firmemente colocado para evitar que el casco se
-                        desprenda. Es esencial en trabajos en altura para que el casco
-                        permanezca en su lugar independientemente de los movimientos o el
-                        viento.</p>
-                </div>
-            </div>
-        </div>
-
-
-
     </div>
 
+    <div class="animate__animated animate__fadeInLeftBig col-lg-6 col-md-12 sf-cl-row">
+        <div class="expediente-card">
+            <div class="expediente-card-header">
+                <h2 class="expediente-title">Expediente digital <span class="expediente-number">°0051</span></h2>
+            </div>
+            <div class="expediente-menu">
+                <button class="expediente-btn active" data-content="1">
+                    <span class="btn-number">1</span>
+                    Denuncia recibida
+                </button>
+                <button class="expediente-btn" data-content="2">
+                    <span class="btn-number">2</span>
+                    Definición del tipo de investigación
+                </button>
+                <button class="expediente-btn" data-content="3">
+                    <span class="btn-number">3</span>
+                    Plazo máximo
+                </button>
+                <button class="expediente-btn" data-content="4">
+                    <span class="btn-number">4</span>
+                    Principios rectores
+                </button>
+                <button class="expediente-btn" data-content="5">
+                    <span class="btn-number">5</span>
+                    Resolución final
+                </button>
+            </div>
+            <div class="left-dir">
+                <button class="sf-btn sf-btn-purple" data-bs-toggle="modal" data-bs-target="#sld3_3_sabiasque">
+                    <i class="fa fa-question-circle"></i> ¿Sabías qué?
+                </button>
+            </div>
+        </div>
+    </div>
 
+    <div class="animate__animated animate__fadeInLeftBig col-lg-6 col-md-12 sf-cr-row">
+        <div class="expediente-content">
+            <div class="content-panel active" id="content-1">
+                <div class="content-image">
+                    <img src="./momento3_3/img/denuncia_recibida.webp" alt="Denuncia recibida">
+                </div>
+                <hr>
+                <div class="content-text">
+                    <p>Se aplican medidas de resguardo inmediatas para proteger a la víctima y garantizar un ambiente
+                        laboral seguro durante el proceso de investigación.</p>
+                </div>
+                <div class="audio-center py-3">
+                    <audio class="audio-con-transcripcion" controls data-transcripcion='[
+                        {"end":1.2,"start":0,"text":"Denuncia recibida."},
+                        {"end":4.2,"start":1.94,"text":"Se aplican medidas de resguardo inmediatas,"},
+                        {"end":6.96,"start":4.5,"text":"como cambios de turno o separación de espacios,"},
+                        {"end":9.56,"start":7.24,"text":"con el fin de proteger a las partes involucradas."}
+                        ]'>
+                        <source src="./momento3_3/audio/denuncia_recibida.mp3" type="audio/mp3">
+                    </audio>
+                    <i class="transcription-toggle fas fa-closed-captioning audio-estilos"></i>
+                </div>
+            </div>
+            <div class="content-panel" id="content-2">
+                <div class="content-image">
+                    <img src="./momento3_3/img/definicion_tipo_investigacion.webp" alt="Tipo de investigación">
+                </div>
+                <hr>
+                <div class="content-text">
+                    <p>Se determina el tipo de investigación según la gravedad del caso, estableciendo los
+                        procedimientos específicos y el equipo investigador competente.</p>
+                </div>
+                <div class="audio-center py-3">
+                    <audio class="audio-con-transcripcion" controls data-transcripcion='[
+                        {"end":5.66,"start":0,"text":"Definición del tipo de investigación. La empresa puede realizarla internamente o derivarla"},
+                        {"end":6.9,"start":5.66,"text":"a la dirección del trabajo."}
+                        ]'>
+                        <source src="./momento3_3/audio/definición_tipo_investigacion.mp3" type="audio/mp3">
+                    </audio>
+                    <i class="transcription-toggle fas fa-closed-captioning audio-estilos"></i>
+                </div>
+            </div>
+            <div class="content-panel" id="content-3">
+                <div class="content-image">
+                    <img src="./momento3_3/img/plazo_maximo.webp" alt="Plazo máximo">
+                </div>
+                <hr>
+                <div class="content-text">
+                    <p>Se establece un plazo máximo de 30 días hábiles para completar la investigación, garantizando una
+                        resolución oportuna y eficiente del caso.</p>
+                </div>
+                <div class="audio-center py-3">
+                    <audio class="audio-con-transcripcion" controls data-transcripcion='[
+                        {"end":5.5,"start":0,"text":"plazo máximo. El proceso tiene un límite legal de 30 días hábiles para completarse."}
+                        ]'>
+                        <source src="./momento3_3/audio/plazo_maximo.mp3" type="audio/mp3">
+                    </audio>
+                    <i class="transcription-toggle fas fa-closed-captioning audio-estilos"></i>
+                </div>
+            </div>
+            <div class="content-panel" id="content-4">
+                <div class="content-image">
+                    <img src="./momento3_3/img/principios_rectores.webp" alt="Principios rectores">
+                </div>
+                <hr>
+                <div class="content-text">
+                    <p>La investigación se rige por principios de imparcialidad, confidencialidad, enfoque de género y
+                        respeto a los derechos fundamentales de todas las partes.</p>
+                </div>
+                <div class="audio-center py-3">
+                    <audio class="audio-con-transcripcion" controls data-transcripcion='[
+                        {"end":3.86,"start":0,"text":"Principios rectores. El procedimiento debe regirse por"},
+                        {"end":8.05,"start":4.15,"text":"celeridad, confidencialidad, imparcialidad y perspectiva de género."}
+                        ]'>
+                        <source src="./momento3_3/audio/principios_rectores.mp3" type="audio/mp3">
+                    </audio>
+                    <i class="transcription-toggle fas fa-closed-captioning audio-estilos"></i>
+                </div>
+            </div>
+            <div class="content-panel" id="content-5">
+                <div class="content-image">
+                    <img src="./momento3_3/img/resolucion_final.webp" alt="Resolución final">
+                </div>
+                <hr>
+                <div class="content-text">
+                    <p>Se emite una resolución final fundamentada que incluye las medidas correctivas, sanciones si
+                        corresponde y acciones preventivas para evitar futuros casos.</p>
+                </div>
+                <div class="audio-center py-3">
+                    <audio class="audio-con-transcripcion" controls data-transcripcion='[
+                        {"end":5.54,"start":0,"text":"Resolución final. Se establecen medidas correctivas o sanciones proporcionales a la gravedad"},
+                        {"end":6.06,"start":5.54,"text":"del hecho."}
+                        ]'>
+                        <source src="./momento3_3/audio/resolucion_final.mp3" type="audio/mp3">
+                    </audio>
+                    <i class="transcription-toggle fas fa-closed-captioning audio-estilos"></i>
+                </div>
+            </div>
+            <div class=" mx-lg-0 me-lg-4 mt-1">
+                <button class="sf-btn sf-btn-purple" data-bs-toggle="modal" data-bs-target="#modalQuiz3_3">
+                    <i class="fas fa-tasks me-2"></i>
+                    Quiz
+                </button>
+            </div>
+        </div>
+    </div>
 </section>
 
 <!-- Modal -->
 <div class="modal fade" id="sld3_3_sabiasque" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered sf-modal-lg">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title"><i class="fa fa-question-circle"></i> ¿Sabías qué?</h5>
+                <h5 class="modal-title">¿Sabías qué?</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i
                         class="fa fa-times"></i></button>
             </div>
             <div class="modal-body">
                 <img src="../../assets/img/botones/sabias_que_icono.webp" alt="" class="sf-img-30 mx-auto">
-                <p class="text-justify">El síndrome del arnés es un riesgo real: Permanecer suspendido en un arnés sin
-                    poder moverse durante un período
-                    prolongado puede provocar lo que se llama el “síndrome del arnés”. Este efecto ocurre cuando la
-                    sangre se acumula en las
-                    piernas, causando mareos y pérdida de conciencia. Por eso, los protocolos de rescate rápido son
-                    fundamentales en
-                    trabajos en altura.</p>
+                <p class="text-justify">Una investigación bien llevada protege derechos, promueve la confianza y
+                    fortalece el clima laboral.”
+                    “Revisa cómo actúa tu organización ante una denuncia”</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="modalQuiz3_3" tabindex="-1" aria-labelledby="modalEvaluacionLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered sf-modal-lg">
+        <div class="modal-content">
+            <div class="modal-header sf-bg-purple">
+                <h5 class="modal-title text-white" id="modalEvaluacionLabel">
+                    <i class="fas fa-tasks me-2"></i>Quiz: Implicancias claves para la empresa y trabajadores
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i
+                        class="fa fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <!-- Actividad de lumi -->
+                <div id="lumi-activity-quiz3-3"></div>
 
             </div>
         </div>

@@ -11,15 +11,28 @@
   background: white;
   border-radius: 16px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  padding: 10px 15px 10px;
-  width: 21vw;
-  height: 320px;
+  padding: 10px 8px 10px;
+  width: 20vw;
+  height: 69vh;
   position: relative;
   cursor: pointer;
   transition: all 0.3s ease;
   border: 2px solid #e0e0e0;
   display: flex;
   flex-direction: column;
+}
+
+.step-card.expanded {
+  width: 25vw;
+}
+
+.step-card:not(.expanded) .audio-card-objetivos {
+  width: 85%;
+  height: 30px;
+}
+
+.step-card:not(.expanded) .transcription-toggle {
+  font-size: 12px;
 }
 
 .step-card:hover {
@@ -262,7 +275,7 @@
   visibility: visible;
 }
 
-.modal-content {
+.restriction-modal .modal-content {
   background: white;
   padding: 30px;
   border-radius: 15px;
@@ -278,27 +291,27 @@
   transform: scale(1);
 }
 
-.modal-icon {
+.restriction-modal .modal-icon {
   font-size: 50px;
   color: #f59e0b;
   margin-bottom: 20px;
 }
 
-.modal-title {
+.restriction-modal .modal-title {
   font-size: 20px;
   font-weight: 600;
   color: #333;
   margin-bottom: 15px;
 }
 
-.modal-message {
+.restriction-modal .modal-message {
   font-size: 16px;
   color: #666;
   margin-bottom: 25px;
   line-height: 1.5;
 }
 
-.modal-close {
+.restriction-modal .modal-close {
   background: #6366f1;
   color: white;
   border: none;
@@ -310,12 +323,15 @@
   transition: background 0.3s ease;
 }
 
-.modal-close:hover {
+.restriction-modal .modal-close:hover {
   background: #4f46e5;
 }
 
-.audio-center {
-  margin-left: 0.1rem;
+.audio-center-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
 }
 
 /* Responsive */

@@ -8,12 +8,12 @@ export function init() {
     });
 
 
-    const circles = document.querySelectorAll('.step-circle');
-    const contents = document.querySelectorAll('.step-content');
+    const circles = document.querySelectorAll('.step-circle1_5');
+    const contents = document.querySelectorAll('.step-content1_5');
 
     function activateStep(targetStep) {
         const targetContent = document.getElementById(`content-${targetStep}`);
-        
+
         // Remover active de todos los círculos y contenidos
         circles.forEach(c => c.classList.remove('active'));
         contents.forEach(content => {
@@ -36,6 +36,14 @@ export function init() {
             audio.pause();
             audio.currentTime = 0;
         });
+
+        // Autoplay del audio para todos los pasos cuando se hace clic
+        const targetAudio = targetContent.querySelector('audio');
+        if (targetAudio) {
+            setTimeout(() => {
+                targetAudio.play().catch(e => console.log('Autoplay prevented:', e));
+            }, 100);
+        }
     }
 
     // Event listeners para círculos
@@ -46,13 +54,7 @@ export function init() {
         });
     });
 
-    // Event listeners para tarjetas
-    contents.forEach(content => {
-        content.addEventListener('click', function () {
-            const targetStep = this.id.split('-')[1];
-            activateStep(targetStep);
-        });
-    });
+
 
     // Accesibilidad con teclado
     circles.forEach(circle => {

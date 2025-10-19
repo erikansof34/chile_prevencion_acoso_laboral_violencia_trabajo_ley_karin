@@ -39,15 +39,15 @@ function initializeCards() {
     const stepNumber = index + 1;
     
     if (stepNumber === 1) {
-      // La primera card siempre está desbloqueada
-      card.classList.add('unlocked');
+      // La primera card siempre está desbloqueada y expandida
+      card.classList.add('unlocked', 'expanded');
       card.classList.remove('locked');
       const lockIcon = card.querySelector('.lock-icon');
       if (lockIcon) lockIcon.remove();
     } else {
       // Las demás cards están bloqueadas inicialmente
       card.classList.add('locked');
-      card.classList.remove('unlocked');
+      card.classList.remove('unlocked', 'expanded');
     }
   });
 }
@@ -55,11 +55,13 @@ function initializeCards() {
 function activateCard(card, stepNumber) {
   const stepCards = document.querySelectorAll('.step-card');
   
-  // Remover active de todas las cards
-  stepCards.forEach(c => c.classList.remove('active'));
+  // Remover active y expanded de todas las cards
+  stepCards.forEach(c => {
+    c.classList.remove('active', 'expanded');
+  });
   
-  // Activar la card seleccionada
-  card.classList.add('active');
+  // Activar y expandir la card seleccionada
+  card.classList.add('active', 'expanded');
   
   // Marcar como completada
   completedSteps.add(stepNumber);

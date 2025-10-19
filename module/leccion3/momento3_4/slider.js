@@ -5,4 +5,17 @@ export function init() {
         className: 'iframe-video-vertical-web',
         style: 'width: 20vw; height: 80vh; min-height: 300px;',
     });
+
+    // Configurar actividad Lumi
+    const activity = {
+        title: 'Implicancias claves para la empresa y trabajadores',
+        src: 'https://app.lumi.education/api/v1/run/dZ-O4A/embed',
+        mobileHeight: '75vh',
+        desktopHeight: '70vh'
+    };
+
+    // Inicializar actividad cuando se abra el modal
+    document.getElementById('modalQuiz3_4')?.addEventListener('shown.bs.modal', function () {
+        LumiActivities.init('modalQuiz3_4', activity);
+    });
 }

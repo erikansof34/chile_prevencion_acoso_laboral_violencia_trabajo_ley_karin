@@ -11,6 +11,7 @@
   gap: 15px;
   margin-bottom: 30px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .btn-interactivo {
@@ -82,8 +83,8 @@
 }
 
 .factor-icono {
-  width: 80px;
-  height: 80px;
+  width: 80%;
+  height: 80%;
   object-fit: cover;
   border-radius: 10px;
   margin-bottom: 10px;
@@ -187,8 +188,8 @@
 }
 
 .senal-icono {
-  width: 80px;
-  height: 80px;
+  width: 80%;
+  height: 80%;
   object-fit: cover;
   border-radius: 10px;
   margin-bottom: 10px;
@@ -247,8 +248,8 @@
 }
 
 .frase-imagen {
-  width: 100px;
-  height: 100px;
+  width: 70%;
+  height: 70%;
   object-fit: cover;
   border-radius: 12px;
   margin: 0 auto 15px auto;
