@@ -119,23 +119,72 @@
 }
 
 @media (max-width: 768px) {
+  .timeline-container {
+    padding: 0 15px;
+    transition: all 0.3s ease;
+  }
+
+  .timeline-container.active {
+    margin-left: -70%;
+  }
+
   .timeline-flow {
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
+    align-items: center;
+    transition: all 0.3s ease;
+  }
+
+  .timeline-container.active .timeline-flow {
+    align-items: flex-start;
   }
 
   .flow-step {
     clip-path: none;
-    min-width: 250px;
+    min-width: 100px;
+    width: 100px;
+    padding: 10px 6px;
+    font-size: 11px;
+  }
+
+  .step-title {
+    font-size: 10px;
   }
 
   .flow-connector {
     width: 2px;
-    height: 20px;
+    height: 15px;
     background: repeating-linear-gradient(to bottom,
         #666 0,
         #666 3px,
         transparent 3px,
         transparent 6px);
+    align-self: center;
+    transition: all 0.3s ease;
+  }
+
+  .timeline-container.active .flow-connector {
+    margin-left: 50px;
+    align-self: flex-start;
+  }
+
+  .step-description {
+    position: absolute;
+    left: 35%;
+    top: 0;
+    width: 59vw;
+    margin: 0;
+    text-align: left;
+    font-size: 11px;
+    padding: 8px 10px;
+  }
+
+  #desc-1,
+  #desc-2,
+  #desc-3 {
+    left: 95%;
+    right: auto;
+    margin-left: 0;
+    margin-right: 0;
   }
 }

@@ -1,11 +1,27 @@
 // JavaScript
 export function init() {
+    // Cargar iframe inicial (video 1)
     loadIframe({
         id: 'Slide1_5Web',
-        src: 'https://iframe.mediadelivery.net/embed/488325/cb55224d-e3cf-4818-a330-04ca34758857?autoplay=false&loop=false&muted=false&preload=true&responsive=true',
+        src: 'https://iframe.mediadelivery.net/embed/516177/439767a9-793d-4267-8bef-9713f9736fec?autoplay=false&loop=false&muted=false&preload=true&responsive=true',
         className: 'iframe-video-vertical-web',
         style: 'width: 20vw; height: 80vh; min-height: 300px;',
     });
+
+    loadIframe({
+        id: 'Slide1_5Mobile',
+        src: 'https://iframe.mediadelivery.net/embed/516177/439767a9-793d-4267-8bef-9713f9736fec?autoplay=false&loop=false&muted=false&preload=true&responsive=true',
+        className: 'iframe-video-vertical-mobile',
+        style: 'width: 20vw; height: 80vh; min-height: 300px;',
+    });
+
+    // URLs de los 4 videos
+    const videoUrls = {
+        '1': 'https://iframe.mediadelivery.net/embed/516177/439767a9-793d-4267-8bef-9713f9736fec?autoplay=false&loop=false&muted=false&preload=true&responsive=true',
+        '2': 'https://iframe.mediadelivery.net/embed/516177/e0b6836a-ed15-4d4b-a899-95d9e8f81772?autoplay=false&loop=false&muted=false&preload=true&responsive=true',
+        '3': 'https://iframe.mediadelivery.net/embed/516177/282180c1-6b29-46c3-b38f-e80fa6450e6b?autoplay=false&loop=false&muted=false&preload=true&responsive=true',
+        '4': 'https://iframe.mediadelivery.net/embed/516177/f6ea0524-d23a-4fbb-a6c9-88ab98279d64?autoplay=false&loop=false&muted=false&preload=true&responsive=true'
+    };
 
 
     const circles = document.querySelectorAll('.step-circle1_5');
@@ -29,6 +45,25 @@ export function init() {
         });
         targetContent.classList.remove('collapsed');
         targetContent.classList.add('active');
+
+        // Cambiar el iframe según el paso seleccionado
+        const iframeContainer = document.getElementById('Slide1_5Web');
+        if (iframeContainer && videoUrls[targetStep]) {
+            iframeContainer.innerHTML = '<div class="loader spinner-pulse"></div>';
+            loadIframe({
+                id: 'Slide1_5Web',
+                src: videoUrls[targetStep],
+                className: 'iframe-video-vertical-web',
+                style: 'width: 20vw; height: 80vh; min-height: 300px;',
+            });
+
+            loadIframe({
+                id: 'Slide1_5Mobile',
+                src: videoUrls[targetStep],
+                className: 'iframe-video-vertical-mobile',
+                style: 'width: 20vw; height: 80vh; min-height: 300px;',
+            });
+        }
 
         // Pausar todos los audios
         const audios = document.querySelectorAll('audio');

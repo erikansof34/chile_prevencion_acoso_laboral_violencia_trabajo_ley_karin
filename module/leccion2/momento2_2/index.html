@@ -1,109 +1,176 @@
-<section class="row h-100">
-  <div class="animate__animated animate__fadeInLeftBig  col-lg-5 sf-bg-dark sf-cl-row">
-    <h1 class="sf-text-white text-center">Diferencias entre conflicto, acoso y <br>
-      <span class="sf-text-purple"> violencia laboral</span>
-    </h1>
-    <img src="../../assets/img/avatars/avatar_hombre_señaladano_derecha_una_mano.webp" alt="avatar"
-      class="sf-img-80 sf-img-sm-60 sf-img-md-50 sf-img-lg-80 sf-img-xl-50 mx-auto mb-2">
-    <p class="sf-text-white text-justify">
-      En Chile, <strong>no todo desacuerdo laboral es acoso.</strong> La Ley Karin <strong>promueve ambientes seguros y
-        respetuosos,</strong>
-      diferenciando el
-      conflicto, el acoso y la violencia en el trabajo.
-    </p>
-    <i class="hipt hipt-light my-2">
-      Haz clic para escuchar este audio
-      <i class="icon-inline icon-inline--start fa-solid fa-arrow-turn-down"></i>
-    </i>
-    <div class="audio-center py-2">
-      <audio class="audio-con-transcripcion" controls data-transcripcion='[
-        {"end":2.82,"start":0,"text":"En Chile no todo desacuerdo laboral es acoso."},
-        {"end":6.68,"start":3.74,"text":"La ley Karin promueve ambientes seguros y respetuosos,"},
-        {"end":8.32,"start":7.04,"text":"diferenciando el conflicto,"},
-        {"end":10.46,"start":8.62,"text":"el acoso y la violencia en el trabajo."}
-        ]'>
-        <source src="./momento2_2/audio/conflicto_acoso_violencia.mp3" type="audio/mp3">
-      </audio>
-      <i class="transcription-toggle fas fa-closed-captioning audio-estilos"></i>
+<section class="row  h-100">
+  <div class="animate__animated animate__fadeInLeftBig col-12 sf-bg-dark sf-ct-col">
+    <img src="../../assets/img/avatars/avatar_equipares2.webp" alt="avatar"
+      class="sf-img-xl-10 mx-auto d-none d-xl-block">
+    <div class="ms-xl-4 mx-xl-0">
+      <h1 class="sf-text-white text-center">Diferencias entre conflicto, acoso y <span class="sf-text-purple">violencia
+          laboral</span>
+      </h1>
+      <img src="../../assets/img/avatars/avatar_equipares2.webp" alt="avatar"
+        class="sf-img-80 sf-img-sm-60 sf-img-md-40 sf-img-lg-30 mx-auto d-xl-none mb-2">
+      <p class="sf-text-white text-justify">
+        En Chile, <strong>no todo desacuerdo laboral es acoso.</strong> La Ley Karin <strong>promueve ambientes seguros
+          y
+          respetuosos,</strong>
+        diferenciando el
+        conflicto, el acoso y la violencia en el trabajo.
+      </p>
     </div>
   </div>
-  <div class="animate__animated animate__fadeInRightBig  col-lg-7 col-md-12 sf-cr-row">
-    <i class="hipt hipt-light my-2">
-      Antes de realizar la actividad, lee el siguiente contenido
-      <i class="icon-inline icon-inline--start fa-solid fa-arrow-turn-down"></i>
-    </i>
-    <!-- contenido -->
-    <div class="infografia-container">
-      <!-- Nivel 1: Conflicto -->
-      <div class="nivel-wrapper izquierda">
-        <img src="./momento2_2/img/conflicto-dialogo.svg" alt="Conflicto" class="icono-externo" width="60" height="60">
-        <div class="nivel-card conflicto">
-          <h3>1. CONFLICTO</h3>
-          <p class="descripcion">Diferencia legítima de opinión que puede resolverse con diálogo.</p>
-          <div class="ejemplo">
-            <i class="fas fa-lightbulb ejemplo-icon"></i>
-            <span><strong>Ejemplo:</strong> Discusión por reparto de tareas.</span>
+
+  <div
+    class="animate__animated animate__fadeInRightBig col-md-12 px-5 pt-4 px-0 pb-1 pb-mt-0 d-flex justify-content-center align-items-center">
+    <div class="my-4 my-lg-0 text-center">
+      <i class="hipt hipt-light my-4">
+        Escoja las respuestas correctas según la definición de cada término.
+        <i class="icon-inline icon-inline--start fa-solid fa-arrow-turn-down"></i>
+      </i>
+
+      <div class="row animate__animated animate__backInUp animate__delay-0s">
+        <!-- aqui va las card -->
+        <!-- Actividad de selección -->
+        <div class="quiz-container">
+          <div class="items-grid" id="items-grid">
+            <!-- Los elementos se generarán dinámicamente con JS -->
           </div>
-          <p class="advertencia">Si no se gestiona, puede transformarse en acoso.</p>
-        </div>
-      </div>
 
-      <!-- Nivel 2: Acoso -->
-      <div class="nivel-wrapper derecha">
-        <div class="nivel-card acoso">
-          <h3>2. ACOSO</h3>
-          <p class="descripcion">Conducta repetitiva o única que daña, humilla o perjudica.</p>
-          <div class="ejemplo">
-            <i class="fas fa-exclamation-triangle ejemplo-icon"></i>
-            <span><strong>Ejemplo:</strong> Burlas constantes sobre orientación sexual.</span>
+          <div class="mt-4">
+            <p id="error-message" class="text-secondary-color text-center text-md font-bold" style="display: none;">
+            </p>
+            <p id="score-text" class="text-md font-bold text-paragraph-light-color text-center" style="display: none;">
+            </p>
+            <div class="button-container">
+              <button id="validate-btn" class="sf-btn sf-btn-purple">
+                <i class="fa fa-check-circle"></i> Validar
+              </button>
+              <button id="reset-btn" class="sf-btn sf-btn-secondary" disabled="">
+                <i class="fa-solid fa-repeat"></i> Reiniciar
+              </button>
+            </div>
           </div>
-          <p class="advertencia">Si persiste o se agrava, puede derivar en violencia.</p>
         </div>
-        <img src="./momento2_2/img/acoso-advertencia.svg" alt="Acoso" class="icono-externo" width="60" height="60">
+
+
       </div>
-
-      <!-- Nivel 3: Violencia -->
-      <div class="nivel-wrapper izquierda">
-        <img src="./momento2_2/img/violencia-rayo.svg" alt="Violencia" class="icono-externo" width="60" height="60">
-        <div class="nivel-card violencia">
-          <h3>3. VIOLENCIA</h3>
-          <p class="descripcion">Agresión directa, física o verbal, especialmente de terceros.</p>
-          <div class="ejemplo">
-            <i class="fas fa-shield-alt ejemplo-icon"></i>
-            <span><strong>Ejemplo:</strong> Cliente que insulta y amenaza a un trabajador.</span>
-          </div>
-          <p class="mensaje-final">Cuidar el respeto es tarea de todos. Un entorno seguro comienza con una palabra
-            amable.</p>
-        </div>
-      </div>
-    </div>
-
-
-
-    <div class=" mx-lg-0 me-lg-4 mt-1">
-      <button class="sf-btn sf-btn-purple" data-bs-toggle="modal" data-bs-target="#modalQuiz2_2">
-        <i class="fas fa-tasks me-2"></i>
-        Quiz
-      </button>
     </div>
   </div>
 </section>
 
-<!-- Modal -->
-<div class="modal fade" id="modalQuiz2_2" tabindex="-1" aria-labelledby="modalEvaluacionLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered sf-modal-lg">
+<!-- Modal Caso 1 -->
+<div class="modal fade" id="sld2_2_caso1" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content">
-      <div class="modal-header sf-bg-purple">
-        <h5 class="modal-title text-white" id="modalEvaluacionLabel">
-          <i class="fas fa-tasks me-2"></i>Quiz: Diferencias entre conflicto, acoso y violencia laboral
-        </h5>
+      <div class="modal-header">
+        <h5 class="modal-title">Caso 1</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i
             class="fa fa-times"></i></button>
       </div>
       <div class="modal-body">
-        <!-- Actividad de lumi -->
-        <div id="lumi-activity-quiz2-2"></div>
+        <img src="./momento2_2/img/discrepancia_presupuesto_uso_marketing_ppt15.webp" alt="" class="sf-img-30 mx-auto">
+        <p class="text-justify"><strong>Discrepancia sobre el uso del presupuesto de marketing:</strong> Dos gerentes de
+          proyecto tienen
+          diferentes visiones sobre si se
+          debe invertir más en publicidad digital (visión A) o en eventos presenciales (visión B) para la próxima
+          campaña. Ambos
+          argumentan con datos válidos y necesitan dialogar para llegar a un acuerdo."</p>
+        <div class="text-center"> <!-- 🔹 bloque centrado -->
+          <p class="hipt hipt-light mb-3">
+            Haz clic para escuchar este audio complementario
+            <i class="icon-inline icon-inline--start fa-solid fa-arrow-turn-down"></i>
+          </p>
 
+          <div class="audio-center py-2">
+            <audio class="audio-con-transcripcion" controls data-transcripcion='[
+              {"end":6.98,"start":0,"text":"Conflicto. Discrepancia sobre el uso del presupuesto de marketing. Dos gerentes de proyecto tienen"},
+              {"end":12.88,"start":6.98,"text":"diferentes visión sobre si se deben invertir más en publicidad digital, visión A: o en eventos"},
+              {"end":16.3,"start":12.88,"text":"presenciales, visión B: para la próxima campaña."},
+              {"end":22.06,"start":16.3,"text":"Ambos argumentan con datos válidos y necesitan dialogar para llegar a un acuerdo."}
+              ]'>
+              <source src="./momento2_2/audio/Caso_corto_conflicto_leccion-2_ppt15.mp3" type="audio/mp3">
+            </audio>
+            <i class="transcription-toggle fas fa-closed-captioning audio-estilos"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Caso 2 -->
+<div class="modal fade" id="sld2_2_caso2" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Caso 2</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i
+            class="fa fa-times"></i></button>
+      </div>
+      <div class="modal-body">
+        <img src="./momento2_2/img/rechazo_injustificante_entrega_trabajo_ppt15.webp" alt="" class="sf-img-30 mx-auto">
+        <p class="text-justify"><strong>Rechazo constante e injustificado de la entrega de trabajo:</strong> Un
+          supervisor le devuelve
+          sistemáticamente a una empleada
+          todos sus informes, incluso cuando cumplen con los requisitos, criticando su trabajo de forma desproporcionada
+          y a
+          puertas cerradas, con el fin de minar su confianza y hacerla sentir incompetente."</p>
+        <div class="text-center"> <!-- 🔹 bloque centrado -->
+          <p class="hipt hipt-light mb-3">
+            Haz clic para escuchar este audio complementario
+            <i class="icon-inline icon-inline--start fa-solid fa-arrow-turn-down"></i>
+          </p>
+
+          <div class="audio-center py-2">
+            <audio class="audio-con-transcripcion" controls data-transcripcion='[
+              {"end":5.64,"start":0,"text":"Acoso laboral. Rechazo constante e injustificado de la entrega de trabajo."},
+              {"end":11.86,"start":6.46,"text":"Un supervisor le devuelve sistemáticamente a un empleado a todos sus informes, incluso"},
+              {"end":17.44,"start":11.86,"text":"cuando cumple con los requisitos, criticando su trabajo de forma desproporcionada y a puertas"},
+              {"end":21.9,"start":17.44,"text":"cerradas, con el fin de minar su confianza y hacerla sentir incompetente."}
+              ]'>
+              <source src="./momento2_2/audio/Caso_corto_acoso_leccion-2_ppt15.mp3" type="audio/mp3">
+            </audio>
+            <i class="transcription-toggle fas fa-closed-captioning audio-estilos"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Caso 3 -->
+<div class="modal fade" id="sld2_2_caso3" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Caso 3</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i
+            class="fa fa-times"></i></button>
+      </div>
+      <div class="modal-body">
+        <img src="./momento2_2/img/agresion_verbal_proveedor_ppt15.webp" alt="" class="sf-img-30 mx-auto">
+        <p class="text-justify"><strong>Agresión verbal por parte de un proveedor externo:</strong> Un proveedor llega a
+          las oficinas y,
+          al no recibir el pago a tiempo,
+          comienza a gritar, utiliza lenguaje soez y golpea la mesa frente al jefe de contabilidad, amenazándolo con
+          acciones
+          legales y desprestigiándolo públicamente en el pasillo."</p>
+        <div class="text-center"> <!-- 🔹 bloque centrado -->
+          <p class="hipt hipt-light mb-3">
+            Haz clic para escuchar este audio complementario
+            <i class="icon-inline icon-inline--start fa-solid fa-arrow-turn-down"></i>
+          </p>
+
+          <div class="audio-center py-2">
+            <audio class="audio-con-transcripcion" controls data-transcripcion='[
+              {"end":4.8,"start":0,"text":"Violencia laboral. Agresión verbal por parte de un proveedor externo."},
+              {"end":10.96,"start":5.46,"text":"Un proveedor llega a las oficinas y al no recibir el pago a tiempo, comienza a gritar,"},
+              {"end":16.84,"start":11.3,"text":"utiliza lenguajes soez y golpea la mesa frente al jefe de contabilidad, amenazándolo con"},
+              {"end":21,"start":16.84,"text":"acciones legales y desprestijándolo públicamente en el pasillo."}
+              ]'>
+              <source src="./momento2_2/audio/Caso_corto_violencia_leccion-2_ppt15.mp3" type="audio/mp3">
+            </audio>
+            <i class="transcription-toggle fas fa-closed-captioning audio-estilos"></i>
+          </div>
+        </div>
       </div>
     </div>
   </div>

@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="./momento1_4/styles.css">
+<link rel="stylesheet" href="./momento1_4/slider.css">
 <section class="row  h-100">
   <div class="animate__animated animate__fadeInLeftBig col-12 sf-bg-dark sf-ct-col">
     <img src="../../assets/img/avatars/avatar_equipares2.webp" alt="avatar"
@@ -27,14 +27,13 @@
       <div class="row animate__animated animate__backInUp animate__delay-0s">
         <!-- aqui va las card -->
         <div class="col-12">
-          <div class="steps-container">
-            <div class="step-card unlocked" data-step="1">
-              <div class="step-circle">
+          <div class="steps-container-mom1_4">
+            <div class="step-card-mom1_4" data-step="1">
+              <div class="step-circle-mom1_4">
                 <span>1</span>
               </div>
-              <div class="card-content">
-                <img src="./momento1_4/img/prevenir_acoso.webp" alt="Prevenir acoso" class="mx-auto d-block mb-2"
-                  style="max-width: 80px; height: auto;">
+              <div class="card-content-mom1_4">
+                <img src="./momento1_4/img/prevenir_acoso.webp" alt="Prevenir acoso" class="mx-auto d-block mb-2">
                 <h3>Prevenir el acoso y la violencia laboral.</h3>
                 <p>Fomenta una cultura de respeto y equidad con enfoque de género, para anticiparse a cualquier forma de
                   maltrato.</p>
@@ -50,16 +49,16 @@
               </div>
             </div>
 
-            <div class="step-connector"></div>
+            <div class="step-connector-mom1_4"></div>
 
-            <div class="step-card locked" data-step="2">
+            <div class="step-card-mom1_4 locked-mom1_4" data-step="2">
               <i class="fas fa-lock lock-icon"></i>
-              <div class="step-circle">
+              <div class="step-circle-mom1_4">
                 <span>2</span>
               </div>
-              <div class="card-content">
+              <div class="card-content-mom1_4">
                 <img src="./momento1_4/img/regular_investigacion.webp" alt="Regular investigación"
-                  class="mx-auto d-block mb-2" style="max-width: 80px; height: auto;">
+                  class="mx-auto d-block mb-2">
                 <h3>Regular la investigación y sanción de los casos.</h3>
                 <p>Establece procedimientos obligatorios, imparciales y con plazos definidos para atender las denuncias.
                 </p>
@@ -76,16 +75,16 @@
               </div>
             </div>
 
-            <div class="step-connector"></div>
+            <div class="step-connector-mom1_4"></div>
 
-            <div class="step-card locked" data-step="3">
+            <div class="step-card-mom1_4 locked-mom1_4" data-step="3">
               <i class="fas fa-lock lock-icon"></i>
-              <div class="step-circle">
+              <div class="step-circle-mom1_4">
                 <span>3</span>
               </div>
-              <div class="card-content">
+              <div class="card-content-mom1_4">
                 <img src="./momento1_4/img/fortalecer_proteccion.webp" alt="Fortalecer protección"
-                  class="mx-auto d-block mb-2" style="max-width: 80px; height: auto;">
+                  class="mx-auto d-block mb-2">
                 <h3>Fortalecer la protección laboral.</h3>
                 <p>Garantiza entornos laborales dignos, seguros y respetuosos, centrados en la integridad y bienestar de
                   cada persona.</p>
@@ -102,16 +101,16 @@
               </div>
             </div>
 
-            <div class="step-connector"></div>
+            <div class="step-connector-mom1_4"></div>
 
-            <div class="step-card locked" data-step="4">
+            <div class="step-card-mom1_4 locked-mom1_4" data-step="4">
               <i class="fas fa-lock lock-icon"></i>
-              <div class="step-circle">
+              <div class="step-circle-mom1_4">
                 <span>4</span>
               </div>
-              <div class="card-content">
+              <div class="card-content-mom1_4">
                 <img src="./momento1_4/img/exgir_protocolos_claros.webp" alt="Protocolos y formación"
-                  class="mx-auto d-block mb-2" style="max-width: 80px; height: auto;">
+                  class="mx-auto d-block mb-2">
                 <h3>Exigir protocolos claros y formación continua.</h3>
                 <p>Los empleadores deben implementar medidas preventivas y capacitar al personal en convivencia y
                   respeto.</p>
@@ -146,4 +145,7 @@
     </div>
   </div>
 </section>
-<script src="./momento1_4/script.js"></script>
+<script type="module">
+  import { init } from './momento1_4/slider.js';
+  init();
+</script>

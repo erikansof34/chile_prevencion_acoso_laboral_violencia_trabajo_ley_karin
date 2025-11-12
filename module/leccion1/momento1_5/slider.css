@@ -31,11 +31,11 @@
 }
 
 .step-circle1_5[data-target="3"] {
-    background: linear-gradient(135deg, #d32f2f, #e74c3c);
+    background: linear-gradient(135deg, #6a1b9a, #8e44ad);
 }
 
 .step-circle1_5[data-target="4"] {
-    background: linear-gradient(135deg, #7b1fa2, #9c27b0);
+    background: linear-gradient(135deg, #c2185b, #e91e63);
 }
 
 .step-circle1_5 span {
@@ -92,14 +92,14 @@
 }
 
 .step-content1_5.active#content-3 {
-    border-left: 4px solid #e74c3c;
-    background: linear-gradient(135deg, #d32f2f, #e74c3c);
+    border-left: 4px solid #8e44ad;
+    background: linear-gradient(135deg, #6a1b9a, #8e44ad);
     color: white;
 }
 
 .step-content1_5.active#content-4 {
-    border-left: 4px solid #9c27b0;
-    background: linear-gradient(135deg, #7b1fa2, #9c27b0);
+    border-left: 4px solid #e91e63;
+    background: linear-gradient(135deg, #c2185b, #e91e63);
     color: white;
 }
 
@@ -116,14 +116,14 @@
 }
 
 .step-content1_5.collapsed#content-3 {
-    border-left: 4px solid #e74c3c;
-    background: linear-gradient(135deg, #ffcdd2, #ef9a9a);
+    border-left: 4px solid #8e44ad;
+    background: linear-gradient(135deg, #e1bee7, #ce93d8);
     color: #b71c1c;
 }
 
 .step-content1_5.collapsed#content-4 {
-    border-left: 4px solid #9c27b0;
-    background: linear-gradient(135deg, #e1bee7, #ba68c8);
+    border-left: 4px solid #e91e63;
+    background: linear-gradient(135deg, #f8bbd9, #f48fb1);
     color: #4a148c;
 }
 
