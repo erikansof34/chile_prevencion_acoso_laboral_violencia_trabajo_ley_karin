@@ -2,7 +2,7 @@ let currentUnlockedStep = 1;
 let completedSteps = new Set();
 
 export function init() {
-  const stepCards = document.querySelectorAll('.step-card');
+  const stepCards = document.querySelectorAll('.step-card-mom1_4');
   
   // Inicializar el estado de las cards
   initializeCards();
@@ -12,13 +12,13 @@ export function init() {
       const stepNumber = parseInt(this.dataset.step);
       
       // Verificar si la card está bloqueada
-      if (this.classList.contains('locked')) {
+      if (this.classList.contains('locked-mom1_4')) {
         showRestrictionModal(stepNumber);
         return;
       }
       
       // Si la card está desbloqueada, activarla
-      if (this.classList.contains('unlocked')) {
+      if (this.classList.contains('unlocked-mom1_4')) {
         activateCard(this, stepNumber);
       }
     });
@@ -33,52 +33,62 @@ export function init() {
 }
 
 function initializeCards() {
-  const stepCards = document.querySelectorAll('.step-card');
+  const stepCards = document.querySelectorAll('.step-card-mom1_4');
   
   stepCards.forEach((card, index) => {
     const stepNumber = index + 1;
     
+    // Todas las cards inician contraídas
+    card.classList.remove('expanded-mom1_4');
+    
     if (stepNumber === 1) {
-      // La primera card siempre está desbloqueada y expandida
-      card.classList.add('unlocked', 'expanded');
-      card.classList.remove('locked');
+      // La primera card está desbloqueada pero contraída
+      card.classList.add('unlocked-mom1_4');
+      card.classList.remove('locked-mom1_4');
       const lockIcon = card.querySelector('.lock-icon');
       if (lockIcon) lockIcon.remove();
     } else {
       // Las demás cards están bloqueadas inicialmente
-      card.classList.add('locked');
-      card.classList.remove('unlocked', 'expanded');
+      card.classList.add('locked-mom1_4');
+      card.classList.remove('unlocked-mom1_4');
     }
   });
 }
 
 function activateCard(card, stepNumber) {
-  const stepCards = document.querySelectorAll('.step-card');
+  const stepCards = document.querySelectorAll('.step-card-mom1_4');
+  
+  // Pausar todos los audios antes de cambiar de card
+  const audios = document.querySelectorAll('audio');
+  audios.forEach(audio => {
+    audio.pause();
+    audio.currentTime = 0;
+  });
   
   // Remover active y expanded de todas las cards
   stepCards.forEach(c => {
-    c.classList.remove('active', 'expanded');
+    c.classList.remove('active-mom1_4', 'expanded-mom1_4');
   });
   
   // Activar y expandir la card seleccionada
-  card.classList.add('active', 'expanded');
+  card.classList.add('active-mom1_4', 'expanded-mom1_4');
   
   // Marcar como completada
   completedSteps.add(stepNumber);
-  card.classList.add('completed');
+  card.classList.add('completed-mom1_4');
   
   // Desbloquear la siguiente card si existe
   const nextStep = stepNumber + 1;
   const nextCard = document.querySelector(`[data-step="${nextStep}"]`);
   
-  if (nextCard && nextCard.classList.contains('locked')) {
+  if (nextCard && nextCard.classList.contains('locked-mom1_4')) {
     unlockCard(nextCard, nextStep);
   }
 }
 
 function unlockCard(card, stepNumber) {
-  card.classList.remove('locked');
-  card.classList.add('unlocked');
+  card.classList.remove('locked-mom1_4');
+  card.classList.add('unlocked-mom1_4');
   
   // Remover el icono de candado con animación
   const lockIcon = card.querySelector('.lock-icon');

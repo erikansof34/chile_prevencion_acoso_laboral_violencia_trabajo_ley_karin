@@ -1,4 +1,5 @@
-<link rel="stylesheet" href="./mobile-styles.css">
+<link rel="stylesheet" href="./slider.css">
+<script src="./slider.js"></script>
 <section class="row  h-100">
     <div class="animate__animated animate__fadeInLeftBig col-12 sf-bg-dark sf-ct-col">
         <img src="../../assets/img/avatars/avatar_equipares3.webp" alt="avatar"
@@ -20,106 +21,218 @@
 
     <div class="animate__animated animate__fadeInLeftBig col-12">
         <!-- contenido -->
-        <div class="my-4 my-lg-0 text-center">
-            <div class="protocol-timeline-container">
-                <div class="protocol-path">
-                    <!-- Paso 1 -->
-                    <div class="protocol-step unlocked" data-step="1">
-                        <div class="step-circle3_2">
-                            <span class="step-number">1</span>
+        <div class="mom3_2-infografia-slider">
+            <div class="mom3_2-slider-container">
+                <!-- Página 1: Filas 1-2 -->
+                <div class="mom3_2-slider-page">
+                    <div class="mom3_2-infografia-header">
+                        <div class="mom3_2-header-col">Factor de Riesgo Identificado</div>
+                        <div class="mom3_2-header-col">Descripción del Riesgo</div>
+                        <div class="mom3_2-header-col">Medidas de Prevención Clave (Ley Karin)</div>
+                    </div>
+
+                    <div class="mom3_2-infografia-row">
+                        <div class="mom3_2-infografia-cell mom3_2-riesgo-cell">
+                            <div class="mom3_2-risk-capsule">
+                                <img src="./momento3_2/img/liderazgo_gestion_deficiente.webp" alt="Liderazgo"
+                                    class="mom3_2-risk-icon">
+                                <span class="mom3_2-risk-text">Liderazgo y Gestión Deficiente</span>
+                            </div>
                         </div>
-                        <div class="step-content">
-                            <img src="./momento3_2/img/canales_confidenciales.webp" alt="Canales confidenciales"
-                                style="width: 60px; height: 60px; display: block; margin: 0 auto 10px auto; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
-                            <h3 class="step-title">Canales confidenciales</h3>
-                            <p class="step-description">Múltiples vías seguras para denunciar sin temor.</p>
+                        <div class="mom3_2-infografia-cell mom3_2-descripcion-cell">
+                            Jefaturas que no gestionan conflictos, actúan de forma ambigua, o toleran el maltrato.
+                        </div>
+                        <div class="mom3_2-infografia-cell mom3_2-prevencion-cell">
+                            <div class="mom3_2-prevention-capsule">
+                                <img src="./momento3_2/img/implementar_capacitacion_obligatoria.webp" alt="Capacitación"
+                                    class="mom3_2-prevention-icon">
+                                <span class="mom3_2-prevention-text">Implementar capacitación obligatoria a jefaturas sobre
+                                    liderazgo positivo, manejo de conflictos, y perspectiva de género.</span>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Paso 2 -->
-                    <div class="protocol-step locked" data-step="2">
-                        <i class="fas fa-lock lock-icon"></i>
-                        <div class="step-circle3_2">
-                            <span class="step-number">2</span>
+                    <div class="mom3_2-infografia-row">
+                        <div class="mom3_2-infografia-cell mom3_2-riesgo-cell">
+                            <div class="mom3_2-risk-capsule">
+                                <img src="./momento3_2/img/cultura_tolerancia_debil.webp" alt="Cultura"
+                                    class="mom3_2-risk-icon">
+                                <span class="mom3_2-risk-text">Cultura de "Tolerancia Cero" Débil</span>
+                            </div>
                         </div>
-                        <div class="step-content">
-                            <img src="./momento3_2/img/proteccion_victima.webp" alt="Protección a la víctima"
-                                style="width: 60px; height: 60px; display: block; margin: 0 auto 10px auto; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
-                            <h3 class="step-title">Protección a la víctima</h3>
-                            <p class="step-description">Medidas inmediatas para garantizar seguridad y bienestar.</p>
+                        <div class="mom3_2-infografia-cell mom3_2-descripcion-cell">
+                            Inexistencia o desconocimiento de un Protocolo de Prevención claro que condene el acoso y la
+                            violencia.
                         </div>
-                    </div>
-
-                    <!-- Paso 3 -->
-                    <div class="protocol-step locked" data-step="3">
-                        <i class="fas fa-lock lock-icon"></i>
-                        <div class="step-circle3_2">
-                            <span class="step-number">3</span>
-                        </div>
-                        <div class="step-content">
-                            <img src="./momento3_2/img/investigacion_clara.webp" alt="Investigación clara"
-                                style="width: 60px; height: 60px; display: block; margin: 0 auto 10px auto; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
-                            <h3 class="step-title">Investigación clara</h3>
-                            <p class="step-description">Procedimientos definidos y transparentes para cada caso.</p>
-                        </div>
-                    </div>
-
-                    <!-- Paso 4 -->
-                    <div class="protocol-step locked" data-step="4">
-                        <i class="fas fa-lock lock-icon"></i>
-                        <div class="step-circle3_2">
-                            <span class="step-number">4</span>
-                        </div>
-                        <div class="step-content">
-                            <img src="./momento3_2/img/no_represalia.webp" alt="No represalia"
-                                style="width: 60px; height: 60px; display: block; margin: 0 auto 10px auto; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
-                            <h3 class="step-title">No represalia</h3>
-                            <p class="step-description">Garantía de que ningún trabajador sufrirá consecuencias por
-                                denunciar.</p>
-                        </div>
-                    </div>
-
-                    <!-- Paso 5 -->
-                    <div class="protocol-step locked" data-step="5">
-                        <i class="fas fa-lock lock-icon"></i>
-                        <div class="step-circle3_2">
-                            <span class="step-number">5</span>
-                        </div>
-                        <div class="step-content">
-                            <img src="./momento3_2/img/responsables_capacitados.webp" alt="Responsables capacitados"
-                                style="width: 60px; height: 60px; display: block; margin: 0 auto 10px auto; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
-                            <h3 class="step-title">Responsables capacitados</h3>
-                            <p class="step-description">Personas designadas con formación en enfoque de género y
-                                derechos
-                                laborales.</p>
-                        </div>
-                    </div>
-
-                    <!-- Paso Final - Recordatorio -->
-                    <div class="protocol-step locked" data-step="6">
-                        <i class="fas fa-lock lock-icon"></i>
-                        <div class="step-circle3_2 step-circle3_2-flag">
-                            <span class="step-flag">🏁</span>
-                        </div>
-                        <div class="step-content">
-                            <h3 class="step-title">¡Recuerda!</h3>
-                            <p class="step-description">El protocolo no es solo un documento, es una herramienta para
-                                cuidar
-                                el ambiente laboral y proteger datos.</p>
+                        <div class="mom3_2-infografia-cell mom3_2-prevencion-cell">
+                            <div class="mom3_2-prevention-capsule">
+                                <img src="./momento3_2/img/difundir_comunicar_protocolo_lay_karin.webp" alt="Protocolo"
+                                    class="mom3_2-prevention-icon">
+                                <span class="mom3_2-prevention-text">Difundir y comunicar activamente el Protocolo de
+                                    Prevención (Ley Karin) y los canales de denuncia.</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
 
-        <!-- Modal de restricción -->
-        <div class="restriction-modal hidden" id="restrictionModal">
-            <div class="modal-content">
-                <i class="fas fa-exclamation-triangle modal-icon"></i>
-                <h3 class="modal-title">¡Acceso Restringido!</h3>
-                <p class="modal-message">Debes completar los pasos en orden. Primero completa el paso anterior para
-                    desbloquear este contenido.</p>
-                <button class="modal-close" onclick="closeRestrictionModal()">Entendido</button>
+                <!-- Página 2: Filas 3-4 -->
+                <div class="mom3_2-slider-page">
+                    <div class="mom3_2-infografia-header">
+                        <div class="mom3_2-header-col">Factor de Riesgo Identificado</div>
+                        <div class="mom3_2-header-col">Descripción del Riesgo</div>
+                        <div class="mom3_2-header-col">Medidas de Prevención Clave (Ley Karin)</div>
+                    </div>
+
+                    <div class="mom3_2-infografia-row">
+                        <div class="mom3_2-infografia-cell mom3_2-riesgo-cell">
+                            <div class="mom3_2-risk-capsule">
+                                <img src="./momento3_2/img/carga_trabajo_inadecuado.webp" alt="Carga trabajo"
+                                    class="mom3_2-risk-icon">
+                                <span class="mom3_2-risk-text">Carga y Diseño del Trabajo Inadecuado</span>
+                            </div>
+                        </div>
+                        <div class="mom3_2-infografia-cell mom3_2-descripcion-cell">
+                            Sobrecarga de trabajo constante, plazos inalcanzables o, al contrario, falta de tareas que
+                            generan aburrimiento y frustración (boreout).
+                        </div>
+                        <div class="mom3_2-infografia-cell mom3_2-prevencion-cell">
+                            <div class="mom3_2-prevention-capsule">
+                                <img src="./momento3_2/img/realizar_un_analisis_puesto_trabajo.webp" alt="Análisis"
+                                    class="mom3_2-prevention-icon">
+                                <span class="mom3_2-prevention-text">Realizar un análisis de puestos de trabajo para asegurar
+                                    una distribución de tareas equitativa y realista.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mom3_2-infografia-row">
+                        <div class="mom3_2-infografia-cell mom3_2-riesgo-cell">
+                            <div class="mom3_2-risk-capsule">
+                                <img src="./momento3_2/img/falta_claridad_rol.webp" alt="Claridad rol"
+                                    class="mom3_2-risk-icon">
+                                <span class="mom3_2-risk-text">Falta de Claridad de Rol</span>
+                            </div>
+                        </div>
+                        <div class="mom3_2-infografia-cell mom3_2-descripcion-cell">
+                            Ambigüedad en las funciones, responsabilidades o expectativas, lo que facilita las críticas
+                            injustificadas.
+                        </div>
+                        <div class="mom3_2-infografia-cell mom3_2-prevencion-cell">
+                            <div class="mom3_2-prevention-capsule">
+                                <img src="./momento3_2/img/definir_perfiles_cargo_responsabilidades.webp" alt="Perfiles"
+                                    class="mom3_2-prevention-icon">
+                                <span class="mom3_2-prevention-text">Definir perfiles de cargo y responsabilidades de forma
+                                    clara y escrita. Realizar evaluaciones objetivas.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Página 3: Filas 5-6 -->
+                <div class="mom3_2-slider-page">
+                    <div class="mom3_2-infografia-header">
+                        <div class="mom3_2-header-col">Factor de Riesgo Identificado</div>
+                        <div class="mom3_2-header-col">Descripción del Riesgo</div>
+                        <div class="mom3_2-header-col">Medidas de Prevención Clave (Ley Karin)</div>
+                    </div>
+
+                    <div class="mom3_2-infografia-row">
+                        <div class="mom3_2-infografia-cell mom3_2-riesgo-cell">
+                            <div class="mom3_2-risk-capsule">
+                                <img src="./momento3_2/img/riesgo_violencia_terceros.webp" alt="Violencia terceros"
+                                    class="mom3_2-risk-icon">
+                                <span class="mom3_2-risk-text">Riesgo de Violencia por Terceros</span>
+                            </div>
+                        </div>
+                        <div class="mom3_2-infografia-cell mom3_2-descripcion-cell">
+                            Alta exposición a la interacción con público externo (clientes, usuarios, pacientes) en
+                            ambientes tensos.
+                        </div>
+                        <div class="mom3_2-infografia-cell mom3_2-prevencion-cell">
+                            <div class="mom3_2-prevention-capsule">
+                                <img src="./momento3_2/img/implementar_seguridad_fisica.webp" alt="Seguridad"
+                                    class="mom3_2-prevention-icon">
+                                <span class="mom3_2-prevention-text">Implementar medidas de seguridad física (barreras, botones
+                                    de pánico). Protocolos de manejo de público difícil.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mom3_2-infografia-row">
+                        <div class="mom3_2-infografia-cell mom3_2-riesgo-cell">
+                            <div class="mom3_2-risk-capsule">
+                                <img src="./momento3_2/img/deficiente_comunicacion_interna.webp" alt="Comunicación"
+                                    class="mom3_2-risk-icon">
+                                <span class="mom3_2-risk-text">Deficiente Comunicación Interna</span>
+                            </div>
+                        </div>
+                        <div class="mom3_2-infografia-cell mom3_2-descripcion-cell">
+                            Escasa o nula participación de los trabajadores en las decisiones, o uso de la comunicación
+                            digital para enviar mensajes amenazantes/abusivos.
+                        </div>
+                        <div class="mom3_2-infografia-cell mom3_2-prevencion-cell">
+                            <div class="mom3_2-prevention-capsule">
+                                <img src="./momento3_2/img/fomentar_canales_comunicacion.webp" alt="Canales"
+                                    class="mom3_2-prevention-icon">
+                                <span class="mom3_2-prevention-text">Fomentar canales de comunicación horizontal. Regular el
+                                    uso de plataformas digitales para evitar el ciberacoso.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Página 4: Filas 7-8 -->
+                <div class="mom3_2-slider-page">
+                    <div class="mom3_2-infografia-header">
+                        <div class="mom3_2-header-col">Factor de Riesgo Identificado</div>
+                        <div class="mom3_2-header-col">Descripción del Riesgo</div>
+                        <div class="mom3_2-header-col">Medidas de Prevención Clave (Ley Karin)</div>
+                    </div>
+
+                    <div class="mom3_2-infografia-row">
+                        <div class="mom3_2-infografia-cell mom3_2-riesgo-cell">
+                            <div class="mom3_2-risk-capsule">
+                                <img src="./momento3_2/img/falta_desarrollo_reconocimiento.webp" alt="Desarrollo"
+                                    class="mom3_2-risk-icon">
+                                <span class="mom3_2-risk-text">Falta de Desarrollo y Reconocimiento</span>
+                            </div>
+                        </div>
+                        <div class="mom3_2-infografia-cell mom3_2-descripcion-cell">
+                            Ausencia de oportunidades de formación y promoción, y falta de reconocimiento al esfuerzo y
+                            los logros.
+                        </div>
+                        <div class="mom3_2-infografia-cell mom3_2-prevencion-cell">
+                            <div class="mom3_2-prevention-capsule">
+                                <img src="./momento3_2/img/establecer_sistemas_transparentes_evaluacion.webp"
+                                    alt="Reconocimiento" class="mom3_2-prevention-icon">
+                                <span class="mom3_2-prevention-text">Establecer sistemas transparentes de evaluación y
+                                    promoción. Implementar mecanismos de reconocimiento formales.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mom3_2-infografia-row">
+                        <div class="mom3_2-infografia-cell mom3_2-riesgo-cell">
+                            <div class="mom3_2-risk-capsule">
+                                <img src="./momento3_2/img/conflicto_interpersonal_no_resuelto.webp" alt="Conflicto"
+                                    class="mom3_2-risk-icon">
+                                <span class="mom3_2-risk-text">Conflicto Interpersonal No Resuelto</span>
+                            </div>
+                        </div>
+                        <div class="mom3_2-infografia-cell mom3_2-descripcion-cell">
+                            Dejar que las rencillas o conflictos entre pares se escalen sin una mediación oportuna y
+                            efectiva.
+                        </div>
+                        <div class="mom3_2-infografia-cell mom3_2-prevencion-cell">
+                            <div class="mom3_2-prevention-capsule">
+                                <img src="./momento3_2/img/instaurar_procedimientos_medicacion.webp" alt="Mediación"
+                                    class="mom3_2-prevention-icon">
+                                <span class="mom3_2-prevention-text">Instaurar un procedimiento de mediación o resolución de
+                                    conflictos temprana. Evitar el aislamiento de grupos.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
