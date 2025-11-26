@@ -12,20 +12,28 @@ const WRAPPERS_DIR = './wrappers';
 // Información de las lecciones
 const LESSONS_INFO = {
     'leccion1': {
-        title: 'Lección 1: Fundamentos de SST',
-        description: 'Fundamentos de la Seguridad y Salud en el Trabajo'
+        title: 'Lección 1: Marco Legal y Objetivos de la Ley Karin',
+        description: 'Introducción al marco legal, Convenio 190 de la OIT y objetivos de la Ley Karin'
     },
     'leccion2': {
-        title: 'Lección 2: Identificación de Riesgos',
-        description: 'Identificación y Evaluación de Riesgos Laborales'
+        title: 'Lección 2: Identificación de Acoso Laboral, Sexual y Violencia',
+        description: 'Conceptos, tipos y manifestaciones del acoso laboral, acoso sexual y violencia en el trabajo'
     },
     'leccion3': {
-        title: 'Lección 3: Protocolos Preventivos',
-        description: 'Protocolos y Medidas Preventivas'
+        title: 'Lección 3: Prevención, Protocolos y Medidas de Protección',
+        description: 'Factores de riesgo, protocolos de prevención, canales de denuncia y medidas de protección'
     },
     'inicio': {
-        title: 'Guía del Usuario - Orientación y Prevención de Riesgos DS 44',
-        description: 'Página de inicio con guía del usuario, objetivos y estructura temática'
+        title: 'Guía del Usuario - Prevención de Acoso Laboral y Violencia en el Trabajo',
+        description: 'Página de inicio con guía del usuario, objetivos y estructura temática del curso Ley Karin'
+    },
+    'compromiso': {
+        title: 'Compromiso del Participante',
+        description: 'Declaración de compromiso con la prevención del acoso y violencia laboral'
+    },
+    'evaluacion': {
+        title: 'Evaluación Final del Curso',
+        description: 'Evaluación integral de conocimientos sobre la Ley Karin'
     }
 };
 
@@ -101,9 +109,11 @@ function generateFileList(isUnified, lessonId) {
         
         // Archivos de momentos dinámicos según la lección
         const momentPatterns = {
-            'leccion1': ['momento1_1', 'momento1_2', 'momento1_3', 'momento1_4', 'momento1_5actividad', 'momento1_6actividad', 'momento1_7', 'momento1_8actividad'],
-            'leccion2': ['momento2_1', 'momento2_2', 'momento2_3', 'momento2_4', 'momento2_5', 'momento2_6', 'momento2_7', 'momento2_8', 'momento2_9', 'momento2_10'],
-            'leccion3': ['momento3_1', 'momento3_2', 'momento3_3', 'momento3_4', 'momento3_5', 'momento3_6', 'momento3_7', 'momento3_8', 'momento3_9', 'momento3_10', 'momento3_11']
+            'leccion1': ['momento1_1', 'momento1_2', 'momento1_3', 'momento1_4', 'momento1_5', 'momento1_6'],
+            'leccion2': ['momento2_1', 'momento2_2', 'momento2_3', 'momento2_4', 'momento2_5', 'momento2_6', 'momento2_7', 'momento2_8', 'momento2_9'],
+            'leccion3': ['momento3_1', 'momento3_2', 'momento3_3', 'momento3_4', 'momento3_5', 'momento3_6', 'momento3_7', 'momento3_8', 'momento3_9', 'momento3_10', 'momento3_11', 'momento3_12', 'momento3_13'],
+            'compromiso': [],
+            'evaluacion': []
         };
         
         const momentos = momentPatterns[lessonId] || [];
@@ -157,11 +167,20 @@ function generateFileList(isUnified, lessonId) {
  */
 function updateScormConfig(lessonId) {
     const lessonInfo = LESSONS_INFO[lessonId];
-    const lessonPath = lessonId === 'inicio' ? 'module/inicio/inicio.html' : `module/${lessonId}/index.html`;
+    let lessonPath;
+    if (lessonId === 'inicio') {
+        lessonPath = 'module/inicio/inicio.html';
+    } else if (lessonId === 'compromiso') {
+        lessonPath = 'module/compromiso/compromiso.html';
+    } else if (lessonId === 'evaluacion') {
+        lessonPath = 'module/evaluacion/quiz.html';
+    } else {
+        lessonPath = `module/${lessonId}/index.html`;
+    }
     const configContent = `// Configuración SCORM - Generado automáticamente
 window.SCORM_CONFIG = {
     lessonPath: '${lessonPath}',
-    courseTitle: 'Orientación y Prevención de Riesgos DS 44',
+    courseTitle: 'Prevención de Acoso Laboral y Violencia en el Trabajo - Ley Karin',
     lessonTitle: '${lessonInfo.title}',
     lessonDescription: '${lessonInfo.description}',
     version: '1.0',
@@ -236,34 +255,28 @@ async function cleanDist() {
  * Valida que la lección existe
  */
 async function validateLesson(lessonId) {
-    // Para inicio, validar diferente estructura
-    if (lessonId === 'inicio') {
-        const inicioPath = path.join(MODULE_DIR, 'inicio');
-        const exists = await fs.pathExists(inicioPath);
-        
-        if (!exists) {
-            throw new Error(`El módulo 'inicio' no existe en ${inicioPath}`);
-        }
-        
-        const inicioHtmlExists = await fs.pathExists(path.join(inicioPath, 'inicio.html'));
-        if (!inicioHtmlExists) {
-            throw new Error(`No se encontró inicio.html en el módulo 'inicio'`);
-        }
-        
-        return true;
-    }
-    
-    // Validación normal para lecciones
     const lessonPath = path.join(MODULE_DIR, lessonId);
     const exists = await fs.pathExists(lessonPath);
     
     if (!exists) {
-        throw new Error(`La lección '${lessonId}' no existe en ${lessonPath}`);
+        throw new Error(`El módulo '${lessonId}' no existe en ${lessonPath}`);
     }
     
-    const indexExists = await fs.pathExists(path.join(lessonPath, 'index.html'));
-    if (!indexExists) {
-        throw new Error(`No se encontró index.html en la lección '${lessonId}'`);
+    // Validar archivo principal según el tipo de módulo
+    let mainFile;
+    if (lessonId === 'inicio') {
+        mainFile = 'inicio.html';
+    } else if (lessonId === 'compromiso') {
+        mainFile = 'compromiso.html';
+    } else if (lessonId === 'evaluacion') {
+        mainFile = 'quiz.html';
+    } else {
+        mainFile = 'index.html';
+    }
+    
+    const mainFileExists = await fs.pathExists(path.join(lessonPath, mainFile));
+    if (!mainFileExists) {
+        throw new Error(`No se encontró ${mainFile} en el módulo '${lessonId}'`);
     }
     
     return true;

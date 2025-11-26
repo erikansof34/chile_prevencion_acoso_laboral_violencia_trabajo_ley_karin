@@ -52,12 +52,12 @@
                             <br><br>
                         </p>
 
-                        <button class="sf-btn sf-btn-purple" id="btnEvaluacion">
-                            <i class="fas fa-clipboard"></i> Presentar Evaluación
-                        </button>
-                        <!-- <button class="sf-btn sf-btn-purple" onclick="presentarEvaluacion()">
+                        <!-- <button class="sf-btn sf-btn-purple" id="btnEvaluacion">
                             <i class="fas fa-clipboard"></i> Presentar Evaluación
                         </button> -->
+                        <button class="sf-btn sf-btn-purple" onclick="presentarEvaluacion()">
+                            <i class="fas fa-clipboard"></i> Presentar Evaluación
+                        </button>
 
                     </div>
                 </div>
@@ -98,9 +98,9 @@
             // window.location.href = path.replace("evaluacion", "compromiso") + "/compromiso.html";
         };
 
-        document.getElementById('btnEvaluacion').addEventListener('click', function () {
-            window.location.href = '../leccion2/index.html';
-        });
+        // document.getElementById('btnEvaluacion').addEventListener('click', function () {
+        //     window.location.href = '../leccion2/index.html';
+        // });
 
         function isSCORMEnvironment() {
             return (typeof window.parent.API !== 'undefined') ||
@@ -173,9 +173,8 @@
                             margin-bottom: 0;
                         ">Ahora continúa con la <strong>Evaluación Formativa</strong> para poner a prueba lo que aprendiste.
                         <br><br>
-                        👉 Cierra esta ventana y sigue con el proceso.</p>
+                        <strong style="background-color: #6e3cd2; padding: 20px; border-radius: 10px; color: white;">👉 Cierra esta ventana y sigue con el proceso.</strong></p>
                         <br>
-                        <img src="../leccion1/img/leccion1.webp" class="mx-auto " alt="Guía">
                     </div>
                 </div>
             `;
