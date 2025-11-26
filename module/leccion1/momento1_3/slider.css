@@ -25,7 +25,7 @@
   filter: grayscale(40%);
 }
 
-.card-moment:hover .card-info ul {
+.card-moment:hover .card-info p {
   opacity: 1;
   max-height: 100px;
 }
@@ -55,12 +55,12 @@
   color: #fff;
   overflow-wrap: break-word;
   word-wrap: break-word;
-  hyphens: auto;
+  /* hyphens: auto; */
   white-space: normal;
   transition: color 0.5s ease-in-out;
 }
 
-.card-moment .card-info ul {
+.card-moment .card-info p {
   margin: 0;
   font-size: 15px;
   line-height: 1.1em;
