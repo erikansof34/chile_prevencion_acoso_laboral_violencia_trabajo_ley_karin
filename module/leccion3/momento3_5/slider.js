@@ -121,7 +121,7 @@ export function init() {
             const icon = ok ? '<i class="fa-solid fa-check ms-1" style="color:#fff"></i>' : '<i class="fa-solid fa-xmark ms-1" style="color:#fff"></i>';
             const situacion = respuestasUsuario[i] ? 'Situación de riesgo identificada' : 'Sin señales de riesgo';
             const text = situacion;
-            items.push(`<li class="mb-1" style="color:#fff">Pregunta ${i}: ${text} ${icon}</li>`);
+            items.push(`<li class="mb-1 text-justify" style="color:#fff">Pregunta ${i}: ${text} ${icon}</li>`);
         }
 
         const situacionesRiesgo = Object.keys(respuestasUsuario).filter(key => respuestasUsuario[key] === true).length;
@@ -139,7 +139,7 @@ export function init() {
 
         const feedbackExterno = document.getElementById('feedback-final-externo');
         if (feedbackExterno) {
-            feedbackExterno.innerHTML = `<div class="resumen-final"><div class="text-center ${feedbackClass}"><div style="color:#fff"><strong>Resumen de Evaluación:</strong> ${mensajeResumen}</div><ul class="mt-2 list-unstyled" style="color:#fff">${items.join('')}</ul></div></div>`;
+            feedbackExterno.innerHTML = `<div class="resumen-final"><div class="text-justify ${feedbackClass}"><div style="color:#fff"><strong>Resumen de Evaluación:</strong> ${mensajeResumen}</div><ul class="mt-2 list-unstyled text-justify" style="color:#fff">${items.join('')}</ul></div></div>`;
             feedbackExterno.classList.remove('d-none');
         }
 
