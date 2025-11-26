@@ -257,19 +257,12 @@
   color: #333;
   margin-bottom: 0.25rem;
   /* 4px -> 0.25rem */
-  padding-left: 1rem;
   position: relative;
   line-height: 1.4;
   word-wrap: break-word;
   overflow-wrap: break-word;
   text-align: justify;
   text-justify: inter-word;
-}
-
-.info-text-acc-traf:before {
-  content: "•";
-  position: absolute;
-  left: 0.3rem;
 }
 
 /* Contenedor del select */
